@@ -6,6 +6,12 @@ let placeBtn = document.querySelector(".placeBtn");
 let carBtn = document.querySelector(".carBtn");
 let allBtn = document.querySelector(".allBtn");
 
+let originalGallery = images.innerHTML;
+
+allBtn.addEventListener("click", () => {
+  location.reload();
+});
+
 const showImages = (title, firstImg, imgClass, imagesArray) => {
   images.innerHTML = `
     <div class="box">
@@ -37,7 +43,7 @@ const showImages = (title, firstImg, imgClass, imagesArray) => {
     img.src = imagesArray[index];
     counter.innerText = `${index + 1}/${imagesArray.length}`;
   };
-
+  // Next Btn
   nextBtn.addEventListener("click", () => {
     index++;
     if (index >= `${imagesArray.length}`) {
@@ -45,7 +51,7 @@ const showImages = (title, firstImg, imgClass, imagesArray) => {
     }
     updateUi();
   });
-
+  // Previous Btn
   prevBtn.addEventListener("click", () => {
     index--;
     if (index < 0) {
@@ -53,15 +59,11 @@ const showImages = (title, firstImg, imgClass, imagesArray) => {
     }
     updateUi();
   });
-
+  // Cancel Btn
   cancelBtn.addEventListener("click", () => {
     images.innerHTML = originalGallery;
   });
 };
-
-allBtn.addEventListener("click", () => {
-  location.reload()
-})
 
 foodBtn.addEventListener("click", () => {
   showImages("Food Images", "./images/food/food.jpg", "foods", [
@@ -89,7 +91,7 @@ flowerBtn.addEventListener("click", () => {
     "./images/flowers/lily.jpg",
     "./images/flowers/purpleflower.jpg",
     "./images/flowers/redflower.jpg",
-    "./images/flowers/yellow.webp",
+    "./images/flowers/yellowflower.webp",
   ]);
 });
 
@@ -104,8 +106,8 @@ placeBtn.addEventListener("click", () => {
 });
 
 carBtn.addEventListener("click", () => {
-  showImages("Car Images", "./images/cars/car.webp", "cars", [
-    "./images/cars/car.webp",
+  showImages("Car Images", "./images/cars/car.jpg", "cars", [
+    "./images/cars/car.jpg",
     "./images/cars/blackcar.jpg",
     "./images/cars/whitecar.jpeg",
     "./images/cars/bluecar.jpg",
