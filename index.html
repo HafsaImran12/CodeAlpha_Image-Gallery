@@ -7,43 +7,44 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="galleryOverLay"></div>
-    <div class="imageBox">
-      <span class="close">&times;</span>
-      <span class="prev">&#10094;</span>
-      <span class="next">&#10095;</span>
-      <img src="" alt="" />
-    </div>
+    <!-- Image Gallery Section -->
+
     <div id="gallery">
-      <h1>My Image gallery</h1>
+      <h1 id="heading">My Image gallery</h1>
+      
       <!-- Images -->
       <div class="images">
-        <div class="img">
-          <img src="./images/food/biryani.jpg" alt="biryani" />
-          <img src="./images/food/food.jpg" alt="food" />
-          <img src="./images/food/burger.jpg" alt="burger" />
+        <div class="section" id="foodBtn">
+          <img src="./images/biryani.jpg" alt="Image1" class="img food" />
+          <img src="./images/burger.jpg" alt="Image2" class="img food" />
+          <img src="./images/waffle.jpg" alt="Image3" class="img food" />
         </div>
-        
-        <div class="img">
-          <img src="./images/animals/animal.jpg" alt="animal">
-          <img src="./images/animals/deer.jpg" alt="deer">
-          <img src="./images/animals/zebra.jpg" alt="zebra">
+        <div class="section">
+          <img src="./images/blue car.jpg" alt="Image4" class="img" />
+          <img src="./images/white car.jpeg" alt="Image5" class="img" />
+          <img src="./images/orange car.webp" alt="Image6" class="img" />
         </div>
-        
-        <div class="img">
-          <img src="./images/cars/car.jpg" alt="car">
-          <img src="./images/cars/bluecar.jpg" alt="bluecar">
-          <img src="./images/cars/whitecar.jpeg" alt="whitecar">
+        <div class="section">
+          <img src="./images/lion.jpg" alt="Image7" class="img" />
+          <img src="./images/zebra.jpg" alt="Image8" class="img" />
+          <img src="./images/peacock.jpg" alt="Image9" class="img" />
         </div>
-
-        <div class="img">
-          <img src="./images/places/1.jpg" alt="place1">
-          <img src="./images/places/2.jpg" alt="place2">
-          <img src="./images/places/3.jpg" alt="place3">
+        <div class="section">
+          <img src="./images/place.jpg" alt="Image10" class="img" />
+          <img src="./images/sea.jpg" alt="Image11" class="img" />
+          <img src="./images/water fall.jpg" alt="Image12" class="img" />
         </div>
-
       </div>
     </div>
+
+    <!-- Light Box Section -->
+    <div class="light-box">
+      <span class="close">&times;</span>
+      <span class="prev">&#10094;</span>
+      <img src="..." id="light-box-img" />
+      <span class="next">&#10095;</span>
+    </div>
+
     <script src="./app.js"></script>
   </body>
 </html>
